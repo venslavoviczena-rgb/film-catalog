@@ -1,0 +1,48 @@
+@media (min-aspect-ratio: 16/9){
+  #list-container{
+    padding:0;
+  }
+}
+body{
+  background: url(https://artposter.com.ua/image/catalog/gallery/product_images/000842/flat/000842_flat.jpg);
+}
+.greetings {
+  margin: 20px;
+}
+.greetings h1{
+  background-color:white;
+  margin:0;
+  display:flex;
+  align-items: center;
+  justify-content:center;
+}
+form label{
+    display:block;
+    color:  rgb(219, 143, 50);;
+}
+#list-container{
+  display: flex;
+  gap:20px;
+  
+}
+form input{
+    width: 400px;
+    height: 200px;
+}  
+
+.thumb-wrap {
+  width: 100%;
+  max-width: 500px;
+  background-color: white;
+ 
+}
+
+.thumb-wrap p{
+  margin: 0px;
+}
+
+
+iframe {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+}

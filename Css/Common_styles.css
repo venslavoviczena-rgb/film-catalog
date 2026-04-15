@@ -1,0 +1,23 @@
+body{
+    margin:0px;
+}
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:10px;
+    background-color: black;
+}
+header a{
+    height:50px;
+    font-size:20px;
+    color: white;
+    display: flex;
+    align-items:center;
+    text-decoration:none;
+}
+header a:hover{
+    color: brown;
+    background-color:white;
+}
+

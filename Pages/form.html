@@ -1,0 +1,38 @@
+<!Doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/Css/Common_styles.css" />
+    <link rel="stylesheet" href="/Css/form.css" />
+    <script src="/form.js" defer></script>
+  </head>
+  <body>
+    <header>
+        <a href="/Pages/index.html">Главный сайт</a>
+        <a href="/Pages/About-Us.html">О проекте</a>
+        <a href="/Pages/form.html">Добавить фильм</a>
+    </header>
+    <h1 class="introduction">Добавление фильма</h1>
+    <div class="box_1">
+    <form id="film-form">
+      <input
+        type="text"
+        id="item-input"
+        placeholder="Название фильма"
+        required
+      />
+      <input type="text" id="url" placeholder="url" required />
+      <button class="button" type="submit">Добавить</button>
+      
+    </form>
+
+    <ul id="list-container"></ul>
+
+    <div class="button_clear">
+      <button id="clear-btn">Очистить список</button>
+    </div>
+    </div>
+  </body>
+</html>
