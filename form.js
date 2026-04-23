@@ -3,7 +3,7 @@ const form = document.querySelector("#film-form");
 console.log(form);
 const input = document.querySelector("#item-input");
 const url = document.querySelector("#url");
-const clearBtn = document.querySelector("#clear-btn");
+
 
 // Функция сохранения данных в localStorage
 function save() {
@@ -34,13 +34,5 @@ form.addEventListener("submit", (e) => {
   // Очищаем поле ввода
 });
 
-// Полная очистка
-clearBtn.addEventListener("click", () => {
-  if (confirm("Очистить весь список?")) {
-    items = [];
-    localStorage.removeItem("film_list"); // Или localStorage.clear()
-    render();
-  }
-});
-// 3. ЗАПУСК ПРИ СТАРТЕ
-// Вызываем рендер сразу, чтобы показать сохраненные данные
+
+

@@ -1,20 +1,109 @@
+/* Стили для хедера */ 
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    background: #0f172a; 
+    min-height: 70px; /* Фиксируем высоту */
+    padding: 10px 0;
+    border-bottom: 1px solid #3498db;
+    /* ФИКСАЦИЯ */
+    position: sticky;      /* Хедер "прилипает" при скролле */
+    top: 0;               /* Прижимаем к самому верху */
+    z-index: 1000;        /* Гарантируем, что меню будет поверх видео */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Добавим тени для отделения от контента */
+}
+
+header a {
+    height: 40px;
+    padding: 8px 20px; /* Внутренние отступы, чтобы рамка не прилипала к тексту */
+    font-size: 14px;
+    font-weight: 500;
+    color: #ccfbf1;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    
+    /* ЦЕНТРИРОВАНИЕ ТЕКСТА */
+    display: flex;          /* Делаем ссылку флекс-боксом */
+    align-items: center;    /* Центрируем текст по вертикали */
+    justify-content: center; /* Центрируем текст по горизонтали */
+    /* Стиль рамки */
+    border: 1px solid #38bdf8; /* Полупрозрачная тонкая рамка */
+    border-radius: 8px; /* Скругление углов */    
+    transition: all 0.3s ease;
+    background: rgba(255, 255, 255, 0.05); /* Легкий эффект стекла */
+    
+}
+
+/* Эффект при наведении */
+header a:hover {
+    color: #fff;
+    border-color: #e74c3c; /* Рамка становится ярко-красной */
+    background: rgba(231, 76, 60, 0.1); /* Легкий красный оттенок внутри */
+    box-shadow: 0 0 10px rgba(231, 76, 60, 0.3); /* Мягкое свечение */
+    transform: translateY(-2px); /* Кнопка чуть «подпрыгивает» */
+}
+
+/* 1. Настройка body для "прилипающего" футера */
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Высота во весь экран */
+    background: url(https://artposter.com.ua/image/catalog/gallery/product_images/000842/flat/000842_flat.jpg);
+
+}
+
+h1 {
+  background-color:#0f172a;
+  color: #ccfbf1;
+  display:flex;
+  align-items: center;
+  justify-content:center;
+}
+
+/* старый код*/
 @media (min-width: 320px) {
   #film-form input{
     height: 50px;
     width: 150px;
   }
 }
-#film-form input{
-  height: 50px;
-  width: 120px;
-  border-radius: 15px;
+
+
+/* Сама форма */
+#film-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;      /* Расстояние между полями */
+    width: 100%;
+    max-width: 500px; /* Ограничиваем максимальную ширину */
 }
-/*Изменеия */
-#film-form{
-  display:flex;
-  flex-direction:column;
-  gap:10px;
+
+/* Стили полей ввода (Input) */
+#film-form input {
+    width: 100%;    /* Растягиваются на всю ширину формы */
+    height: 50px;
+    padding: 0 15px;
+    background: #0f172a;
+    border: 1px solid #38bdf8;
+    border-radius: 10px;
+    color: #ccfbf1;
+    font-size: 16px;
+    box-sizing: border-box; /* Чтобы padding не ломал ширину */
+    transition: all 0.3s ease;
 }
+
+#film-form input:focus {
+    outline: none;
+    border-color: #ccfbf1;
+    background: rgba(15, 23, 42, 0.8);
+    box-shadow: 0 0 15px rgba(56, 189, 248, 0.3);
+}
+
+
 /*Изменеия */
 .introduction {
   text-align: center;
@@ -24,29 +113,70 @@
   display:flex;
   flex-direction:column;
   align-items: right;
-  justify-content:center;
-  
+  align-items: center;  
 }
-.button {
-  width: 70px;
-  height: 50px;
-  cursor: pointer;
-  border-radius: 15px;
+
+
+/* Кнопка "Добавить" и "Очистить" */
+button {
+    background: #0f172a;
+    color: #ccfbf1;
+    width: 100%;
+    height: 55px;
+    cursor: pointer;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    margin-top: 10px;
 }
-.button:hover {
-  color: rgb(250, 26, 26);
-  background-color: rgb(9, 9, 82);
+
+/* Кнопка Добавить (Синяя) */
+/* .button {
+    background: transparent;
+    color: #38bdf8;
+    border: 2px solid #38bdf8;
+} */
+
+button:hover {
+    background: #38bdf8;
+    color: #0f172a;
+    box-shadow: 0 0 20px rgba(56, 189, 248, 0.4);
 }
-h1 {
-  color: black;
+
+
+
+
+
+
+
+
+/* Стили для футера*/
+/* 3. Стили футера в стиле Neon Cyber */
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+    background: #0f172a; 
+    border-top: 1px solid #3498db; /* Линия сверху, как у хедера снизу */
+    margin-top: auto; /* Дополнительная страховка прижатия */
 }
-.button_clear button {
-  width:100px;
-  height:80px;
-  border-radius: 15px; 
+
+footer p {
+    margin: 0;
+    padding: 8px 20px;
+    font-size: 13px;
+    font-weight: 500;
+    color: #ccfbf1; /* Тот же бирюзовый цвет */
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    
+    /* Рамка как у кнопок меню, но без эффекта наведения */
+    /* border: 1px solid rgba(56, 189, 248, 0.4); 
+    border-radius: 8px; */
+    background: #0f172a;
 }
-.button_clear:hover button{
-  cursor: pointer;
-  color: rgb(250, 26, 26);
-  background-color: rgb(9, 9, 82);
-}
+
