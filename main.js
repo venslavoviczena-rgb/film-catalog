@@ -6,8 +6,9 @@ const rawData = localStorage.getItem("film_list");
 let items = rawData ? JSON.parse(rawData) : [];
 
 // Ссылки на элементы DOM
-
 const container = document.querySelector("#list-container");
+const clearBtn = document.querySelector("#clear-btn");
+
 console.log(container)
 // Функция отрисовки интерфейса
 function render() {
@@ -43,3 +44,12 @@ function render() {
 // 3. ЗАПУСК ПРИ СТАРТЕ
 // Вызываем рендер сразу, чтобы показать сохраненные данные
 render();
+
+// Полная очистка
+clearBtn.addEventListener("click", () => {
+  if (confirm("Очистить весь список?")) {
+    items = [];
+    localStorage.removeItem("film_list"); // Или localStorage.clear()
+    render();
+  }
+});

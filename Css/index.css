@@ -1,30 +1,84 @@
-@media (min-aspect-ratio: 16/9){
-  #list-container{
-    padding:0;
-  }
+/* Стили для хедера */ 
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    background: #0f172a; 
+    min-height: 70px; /* Фиксируем высоту */
+    padding: 10px 0;
+    border-bottom: 1px solid #3498db;
+    /* ФИКСАЦИЯ */
+    position: sticky;      /* Хедер "прилипает" при скролле */
+    top: 0;               /* Прижимаем к самому верху */
+    z-index: 1000;        /* Гарантируем, что меню будет поверх видео */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Добавим тени для отделения от контента */
 }
-body{
-  background: url(https://artposter.com.ua/image/catalog/gallery/product_images/000842/flat/000842_flat.jpg);
+
+header a {
+    height: 40px;
+    padding: 8px 20px; /* Внутренние отступы, чтобы рамка не прилипала к тексту */
+    font-size: 14px;
+    font-weight: 500;
+    color: #ccfbf1;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    
+    /* Стиль рамки */
+    border: 1px solid #38bdf8; /* Полупрозрачная тонкая рамка */
+    border-radius: 8px; /* Скругление углов */    
+    transition: all 0.3s ease;
+    background: rgba(255, 255, 255, 0.05); /* Легкий эффект стекла */
+    
 }
+
+/* Эффект при наведении */
+header a:hover {
+    color: #fff;
+    border-color: #e74c3c; /* Рамка становится ярко-красной */
+    background: rgba(231, 76, 60, 0.1); /* Легкий красный оттенок внутри */
+    box-shadow: 0 0 10px rgba(231, 76, 60, 0.3); /* Мягкое свечение */
+    transform: translateY(-2px); /* Кнопка чуть «подпрыгивает» */
+}
+
+/* старый код*/
+body {
+    margin: 0;
+    background: url(https://artposter.com.ua/image/catalog/gallery/product_images/000842/flat/000842_flat.jpg);
+    /* ФИКСАЦИЯ ФУТЕРА */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Растягивает body минимум на всю высоту окна браузера */
+}
+
 .greetings {
   margin: 20px;
 }
-.greetings h1{
-  background-color:white;
+
+.greetings h1,h2{
+  background-color:#0f172a;
+  color: #ccfbf1;
   margin:0;
   display:flex;
   align-items: center;
   justify-content:center;
 }
+
 form label{
     display:block;
     color:  rgb(219, 143, 50);;
 }
+
 #list-container{
+  margin: 10;
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap:20px;
-  
+  list-style: none; /* Убираем маркеры списка */
 }
+
 form input{
     width: 400px;
     height: 200px;
@@ -33,16 +87,74 @@ form input{
 .thumb-wrap {
   width: 100%;
   max-width: 500px;
-  background-color: white;
- 
+  background-color: #0f172a;
+  color: #ccfbf1;
+  font-size: 18px;
+  border: 1px solid #3498db;
+  border-radius: 15px;
+  padding: 15px;
+  box-sizing: border-box; /* Важно: чтобы padding не увеличивал ширину карточки */
 }
 
 .thumb-wrap p{
   margin: 0px;
+  
 }
 
 
 iframe {
   width: 100%;
   aspect-ratio: 16 / 9;
+}
+
+/* Стили для футера*/
+/* 3. Стили футера в стиле Neon Cyber */
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+    background: #0f172a; 
+    border-top: 1px solid #3498db; /* Линия сверху, как у хедера снизу */
+    margin-top: auto; /* Дополнительная страховка прижатия */
+}
+
+footer p {
+    margin: 0;
+    padding: 8px 20px;
+    font-size: 13px;
+    font-weight: 500;
+    color: #ccfbf1; /* Тот же бирюзовый цвет */
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    
+    /* Рамка как у кнопок меню, но без эффекта наведения */
+    /* border: 1px solid rgba(56, 189, 248, 0.4); 
+    border-radius: 8px; */
+    background: #0f172a;
+}
+
+/* Кнопка "Добавить" и "Очистить" */
+button {
+    background: #0f172a;
+    color: #ccfbf1;
+    width: 100%;
+    height: 55px;
+    cursor: pointer;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    display: block;    
+    margin: 10px auto; 
+    max-width: 300px;
+}
+
+
+button:hover {
+    background: #38bdf8;
+    color: #0f172a;
+    box-shadow: 0 0 20px rgba(56, 189, 248, 0.4);
 }
